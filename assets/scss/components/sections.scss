@@ -1,0 +1,22 @@
+.image-text {
+    .title {
+        strong, b {
+            color: #22857F;
+        }
+    }
+}
+
+.reveal-type {
+    .word {
+        font-weight: 700;
+    }
+    &.font-base {
+        .word {
+            font-weight: 400 !important;
+        }
+    }
+
+    b,strong {
+        font-weight: 700 !important;
+    }
+}

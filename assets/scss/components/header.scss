@@ -1,0 +1,173 @@
+// header.scss
+
+.header-wrapper {
+    transition: all 0.5s ease;
+}
+
+.hdr-logo {
+    transition: all 0.5s ease;
+}
+
+.header-logo {
+    transition: all 0.5s ease;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+
+    .bar {
+        width: 14px;
+        height: 1px;
+        border-radius: 2px;
+        background-color: white;
+        transition: 0.5s;
+        position: relative;
+
+        &.scroll {
+            background-color: #1C2C36;
+            &:before,&:after {
+                background-color: #1C2C36;
+            }
+        }
+
+        &:before,&:after {
+            content: "";
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            background-color: white;
+            transition: 0.5s;
+        }
+
+        &:before {
+            transform: translateY(-5px);
+        }
+        &:after {
+            transform: translateY(5px);
+        }
+    }
+
+    &.active {
+        .bar {
+            transform: rotate(360deg);
+            background-color: transparent;
+            &:before {
+                transform: translateY(0) rotate(45deg);
+            }
+            &:after {
+                transform: translateY(0) rotate(-45deg);
+            }
+        }
+    }
+}
+
+.nav-menu {
+    transition: all 0.5s ease;
+}
+
+.group-hover {
+    .hover-child {
+        max-height: 0;
+        padding: 0 24px;
+        overflow: hidden;
+        transition: all 0.34s ease;
+    }
+
+    &:hover {
+        .hover-child {
+            max-height: 999px;
+            padding: 24px;
+            overflow: visible;
+        }
+    }
+}
+
+.group-hover2 {
+    .hover-child2 {
+        max-height: 0;
+        padding: 0 24px;
+        overflow: hidden;
+        transition: all 0.34s ease;
+    }
+
+    &:hover {
+        .hover-child2 {
+            max-height: 300px;
+            padding: 24px;
+        }
+    }
+}
+
+.button-header {
+    // No specific styles in the original code
+}
+
+header.scroll {
+    background-color: white !important;
+}
+
+@media screen and (max-width: 1023px) {
+    .header-wrapper,.header-logo,.nav-menu {
+        transition: all 0.5s ease;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-menu {
+        background-color: white;
+        right: 0;
+        height: calc(100vh - 109px);
+        width: 80%;
+        padding: 0 20px;
+        padding-top: 80px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        &.scroll {
+            height: calc(100vh - 80px);
+        }
+    }
+
+    .group-hover {
+        .hover-child {
+            position: relative;
+            top: auto;
+            max-height: 999px;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-top: 16px;
+            * {
+                font-weight: 400 !important;
+            }
+        }
+    }
+
+    .group-hover2 {
+        .hover-child2 {
+            position: relative;
+            top: auto;
+            left: 0;
+            max-height: 999px;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-top: 16px;
+            * {
+                font-weight: 400 !important;
+            }
+        }
+    }
+
+    .button-header {
+        position: absolute;
+        top: 0;
+        transition: all 0.5s ease;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 10;
+    }
+}

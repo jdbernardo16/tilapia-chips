@@ -1,0 +1,43 @@
+{
+  "name": "Tilipia Chips",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "analyze": "nuxt build --analyze",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "compress": "npx gzipper compress ./.output/public --exclude=webp --verbose --brotli",
+    "dist": "npm run generate && npm run compress"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^2.1.5",
+    "@nuxt/icon": "^1.1.1",
+    "@nuxt/image": "^1.7.0",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/seo": "^2.0.0-rc.14",
+    "@nuxtjs/sitemap": "^6.0.0",
+    "@studio-freight/lenis": "^1.0.42",
+    "compression": "^1.7.4",
+    "gsap": "^3.12.5",
+    "lightgallery": "^2.7.2",
+    "nuxt": "^3.14.159",
+    "nuxt-gtag": "^2.0.7",
+    "nuxt-lazy-hydrate": "^1.0.0",
+    "nuxt-schema-org": "^3.3.8",
+    "pdfmake": "^0.2.10",
+    "split-type": "^0.3.4",
+    "swiper": "^11.1.9",
+    "vue": "latest",
+    "vue3-dropzone": "^2.2.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
+    "sass-embedded": "^1.77.8",
+    "tailwindcss": "^3.4.7"
+  }
+}
